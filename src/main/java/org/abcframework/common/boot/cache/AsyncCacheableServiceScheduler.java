@@ -1,9 +1,8 @@
-package org.abcframework.common.boot;
+package org.abcframework.common.boot.cache;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import org.abcframework.common.boot.async.AsyncCacheableService;
-import org.abcframework.common.boot.cache.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ public class AsyncCacheableServiceScheduler {
 
   @Scheduled(cron = "0 * * * * ?")
   public void getAddress() {
-    User user = new User(AbcCommonBootController.DEFAULT_USERID);
+    User user = new User(AbcCommonCacheController.DEFAULT_USERID);
     Future<String> result = asyncCacheableService.getAddress(user);
     try {
       LOGGER.info("User({}) has address:{}", user.getId(), result.get());
