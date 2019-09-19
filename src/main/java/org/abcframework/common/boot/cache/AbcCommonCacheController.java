@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @ConditionalOnProperty(
-	    name = "abc.enable.asyncCacheableService",
-	    havingValue = "true",
-	    matchIfMissing = false)
+    name = "abc.enable.asyncCacheableService",
+    havingValue = "true",
+    matchIfMissing = false)
 @RestController
 public class AbcCommonCacheController {
   public static final String DEFAULT_USERID = "u1";

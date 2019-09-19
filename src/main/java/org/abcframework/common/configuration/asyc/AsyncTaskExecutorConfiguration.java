@@ -2,8 +2,6 @@ package org.abcframework.common.configuration.asyc;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.ThreadPoolExecutor;
-
-import org.abcframework.common.configuration.asyc.AsyncTaskExecutorProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
