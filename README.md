@@ -11,7 +11,7 @@ integrated in:
 1. Job Scheduling
 1. Metrics based on Micrometer
 1. Retry
-1. Validation
+1. Bean Validation
 
 
 The library provides utilities for the following common cross-cutting concerns:

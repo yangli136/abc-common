@@ -2,7 +2,6 @@ package org.abcframework.common.configuration.retry;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import org.abcframework.common.exception.RecoverableFailureException;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -19,7 +18,8 @@ public class RetryConfiguration {
 
   @Bean
   @Primary
-  @ConditionalOnExpression("'${retry.policy}' == 'exponential' or '${retry.policy}' == 'all' or ${retry.policy:true}")
+  @ConditionalOnExpression(
+      "'${retry.policy}' == 'exponential' or '${retry.policy}' == 'all' or '${retry.policy:true}' == 'true'")
   @ConditionalOnProperty(name = "retry.policy", havingValue = "exponential", matchIfMissing = false)
   public RetryTemplate retryTemplateExponential() {
     RetryTemplate retryTemplate = new RetryTemplate();
@@ -41,7 +41,8 @@ public class RetryConfiguration {
 
   @Bean
   @Primary
-  @ConditionalOnExpression("'${retry.policy}' == 'simple' or '${retry.policy}' == 'all' or ${retry.policy:true}")
+  @ConditionalOnExpression(
+      "'${retry.policy}' == 'simple' or '${retry.policy}' == 'all' or '${retry.policy:true}' == 'true'")
   public RetryTemplate retryTemplateSimple() {
     RetryTemplate retryTemplate = new RetryTemplate();
 
@@ -56,7 +57,8 @@ public class RetryConfiguration {
   }
 
   @Bean
-  @ConditionalOnExpression("'${retry.policy}' == 'none' or '${retry.policy}' == 'all' or ${retry.policy:true}")
+  @ConditionalOnExpression(
+      "'${retry.policy}' == 'none' or '${retry.policy}' == 'all' or '${retry.policy:true}' == 'true'")
   public RetryTemplate retryTemplateNone() {
     RetryTemplate retryTemplate = new RetryTemplate();
 

@@ -21,13 +21,12 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
 @SpringBootTest
 @ContextConfiguration(
-  classes = {
-    TestApplicationContext.class,
-    RetryConfiguration.class,
-    SampleRetryClientService.class,
-    SampleRetryableService.class
-  }
-)
+    classes = {
+      TestApplicationContext.class,
+      RetryConfiguration.class,
+      SampleRetryClientService.class,
+      SampleRetryableService.class
+    })
 @TestPropertySource(properties = {"retry.policy=exponential"})
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class RetryConfigurationExponentialTest {
