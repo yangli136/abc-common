@@ -4,15 +4,17 @@ _README FILE_
 
 # Common Utilities for Spring Boot Based Applications.
 
-This is a Spring Boot based application with some of the most common used Spring framework, Spring Boot features
-integrated in:
+This demo application could be used to learn and test some most important and most commonly used features of Spring
+Framework and Spring Boot.
+
+This is a Spring Boot based application with following Spring Framework, Spring Boot features integrated in:
+
 1. Async task execution
 1. Cache
 1. Job Scheduling
 1. Metrics based on Micrometer
 1. Retry
 1. Bean Validation
-
 
 The library provides utilities for the following common cross-cutting concerns:
 
