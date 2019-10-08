@@ -4,18 +4,18 @@
   <parent>
     <groupId>org.abcframework</groupId>
     <artifactId>abc-parent</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
   <artifactId>abc-common</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <name>abc-common</name>
   <description>App Common Utilities</description>
 
   <!-- Latest version check date: 09/16/2019 -->
   <properties>
-    <abc-log4j2-starter.version>0.0.1-SNAPSHOT</abc-log4j2-starter.version>
+    <abc-log4j2-starter.version>0.0.2-SNAPSHOT</abc-log4j2-starter.version>
     <spring-boot-maven-plugin.version>2.1.5.RELEASE</spring-boot-maven-plugin.version>
-    <tomcat-embed-core.version>9.0.24</tomcat-embed-core.version>
+    <tomcat-embed-core.version>9.0.26</tomcat-embed-core.version>
   </properties>
   <dependencies>
     <!-- ** logging * -->
