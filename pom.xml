@@ -4,10 +4,10 @@
   <parent>
     <groupId>org.abcframework</groupId>
     <artifactId>abc-parent</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
   </parent>
   <artifactId>abc-common</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.3-SNAPSHOT</version>
   <name>abc-common</name>
   <description>App Common Utilities</description>
 
@@ -15,6 +15,7 @@
   <properties>
     <abc-log4j2-starter.version>0.0.2-SNAPSHOT</abc-log4j2-starter.version>
     <spring-boot-maven-plugin.version>2.1.5.RELEASE</spring-boot-maven-plugin.version>
+    <start-class>org.abcframework.common.boot.AbcCommonApplication</start-class>
   </properties>
   <dependencies>
     <!-- ** logging * -->
@@ -73,7 +74,7 @@
       <artifactId>spring-boot-starter-actuator</artifactId>
       <optional>true</optional>
     </dependency>
-    
+
     <!-- Spring configuration metadata for contextual help in IDE -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -89,21 +90,10 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring-boot-maven-plugin.version}</version>
-        <configuration>
-          <mainClass>org.abcframework.common.boot.AbcCommonApplication</mainClass>
-          <layout>ZIP</layout>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>repackage</goal>
-            </goals>
-            <configuration>
-              <attach>false</attach>
-            </configuration>
-          </execution>
-        </executions>
+      </plugin>
+      <plugin>
+        <groupId>pl.project13.maven</groupId>
+        <artifactId>git-commit-id-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
