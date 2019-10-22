@@ -13,7 +13,7 @@
 
   <!-- Latest version check date: 09/16/2019 -->
   <properties>
-    <abc-log4j2-starter.version>0.0.2-SNAPSHOT</abc-log4j2-starter.version>
+    <abc-log4j2-starter.version>0.0.3-SNAPSHOT</abc-log4j2-starter.version>
     <spring-boot-maven-plugin.version>2.1.5.RELEASE</spring-boot-maven-plugin.version>
     <start-class>org.abcframework.common.boot.AbcCommonApplication</start-class>
   </properties>

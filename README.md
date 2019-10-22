@@ -38,6 +38,7 @@ The library provides utilities for the following common cross-cutting concerns:
 ### Run locally:
 
     mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dweb.test.enabled=true -Dabc.enable.asyncCacheableService=true"
+    mvn -o spring-boot:run -Dspring-boot.run.jvmArguments="-Dweb.test.enabled=true -Dabc.enable.asyncCacheableService=true"
 
 with log4j2 
 
